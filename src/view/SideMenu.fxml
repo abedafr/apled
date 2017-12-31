@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="sidePane" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="160.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SideMenuController">
+   <children>
+      <ImageView fx:id="img" fitHeight="106.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></ImageView>
+      <JFXButton fx:id="addView" accessibleText="M1" prefHeight="70.0" prefWidth="159.0" ripplerFill="#11abed" style="-fx-background-color: #333;" stylesheets="@madena.css" text="Add Predicate" textFill="#eeeeee" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></JFXButton>
+      <JFXButton fx:id="consultView" accessibleText="M2" prefHeight="70.0" prefWidth="159.0" ripplerFill="#11abed" style="-fx-background-color: #333;" stylesheets="@madena.css" text="Consult" textFill="#eeeeee" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></JFXButton>
+      <JFXButton fx:id="editVIew" accessibleText="M3" prefHeight="70.0" prefWidth="159.0" ripplerFill="#11abed" style="-fx-background-color: #333;" stylesheets="@madena.css" text="Edit PL File" textFill="#eeeeee" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></JFXButton>
+      <JFXButton fx:id="exit" accessibleText="M0" prefHeight="70.0" prefWidth="159.0" ripplerFill="#ff4040" style="-fx-background-color: #333;" stylesheets="@madena.css" text="Exit" textFill="#eeeeee" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></JFXButton>
+   </children>
+</VBox>

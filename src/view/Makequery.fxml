@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MakequeryController">
+
+    <children>
+  <AnchorPane fx:id="addView" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #222;">
+         <children>
+            <JFXTextField fx:id="inputPredicate" focusColor="#11abed" labelFloat="true" layoutX="107.0" layoutY="93.0" prefHeight="33.0" prefWidth="503.0" promptText="Write a predicate to add.." stylesheets="@madena.css" unFocusColor="#22abed">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="addPredicate" buttonType="RAISED" layoutX="656.0" layoutY="94.0" onAction="#writepredicate" prefHeight="34.0" prefWidth="84.0" ripplerFill="WHITE" style="-fx-background-color: #11abed;" text="Add" textFill="WHITE" />
+            <JFXTextArea fx:id="plPredicates" editable="false" focusColor="#11abed" labelFloat="true" layoutX="107.0" layoutY="168.0" prefHeight="390.0" prefWidth="632.0" promptText="Your Prolog file..." style="-fx-background-color: #ffffff;" stylesheets="@madena.css" unFocusColor="#22abed">
+               <font>
+                  <Font name="Consolas" size="15.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+  <AnchorPane fx:id="consultView" minHeight="0.0" minWidth="0.0" prefHeight="601.0" prefWidth="801.0" visible="false">
+         <children>
+            <JFXTextField fx:id="checkPredicate" focusColor="#229933" labelFloat="true" layoutX="106.0" layoutY="94.0" prefHeight="33.0" prefWidth="503.0" promptText="Predicate to Check..." stylesheets="@madena.css" unFocusColor="#229911">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="655.0" layoutY="93.0" onAction="#makerequest" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: #293;" text="Consult" textFill="#eeeeee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextArea fx:id="results" editable="false" focusColor="#229933" labelFloat="true" layoutX="106.0" layoutY="163.0" prefHeight="392.0" prefWidth="637.0" promptText="Results.." stylesheets="@madena.css" unFocusColor="#229911">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <JFXTextArea fx:id="editArea" focusColor="#3496ff" labelFloat="true" layoutX="82.0" layoutY="75.0" onInputMethodTextChanged="#onEdit" prefHeight="450.0" prefWidth="670.0" promptText="Edit File ..." stylesheets="@madena.css" unFocusColor="#51a5ff">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="560.0" layoutY="539.0" onAction="#saveEdit" prefHeight="34.0" prefWidth="84.0" ripplerFill="LIME" style="-fx-background-color: #141;" text="Save" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="666.0" layoutY="539.0" onAction="#cancelEdit" prefHeight="34.0" prefWidth="84.0" ripplerFill="RED" style="-fx-background-color: #611;" text="Cancel" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="400.0" prefWidth="96.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXHamburger fx:id="burger" layoutX="32.0" layoutY="33.0" prefHeight="33.0" prefWidth="24.0" stylesheets="@madena.css" />
+      <AnchorPane fx:id="homePane" prefHeight="599.0" prefWidth="800.0" style="-fx-background-color: #111;">
+         <children>
+            <Label layoutX="330.0" layoutY="95.0" prefHeight="73.0" prefWidth="154.0" text="aPled" textAlignment="RIGHT" textFill="#999999">
+               <font>
+                  <Font name="Roboto Bold" size="60.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="path" focusColor="#00afff" labelFloat="true" layoutX="218.0" layoutY="305.0" prefHeight="32.0" prefWidth="332.0" promptText="Open This File..." stylesheets="@madena.css" unFocusColor="#847dff" />
+            <JFXButton fx:id="browse" buttonType="RAISED" layoutX="561.0" layoutY="305.0" prefHeight="32.0" prefWidth="64.0" style="-fx-background-color: #66e;" text="Browse" textFill="#e8e8e8" />
+            <JFXButton fx:id="convert" buttonType="RAISED" layoutX="334.0" layoutY="364.0" onAction="#convert" prefHeight="32.0" prefWidth="64.0" ripplerFill="#00ff22" style="-fx-background-color: #393;" text="Open" textFill="WHITE" />
+            <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="417.0" layoutY="364.0" prefHeight="32.0" prefWidth="64.0" ripplerFill="RED" style="-fx-background-color: #922;" text="Cancel" textFill="WHITE" />
+            <Label layoutX="339.0" layoutY="173.0" prefHeight="31.0" prefWidth="139.0" text="a Prolog Editor" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
